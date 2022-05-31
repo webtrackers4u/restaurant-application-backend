@@ -2,6 +2,7 @@
 
 namespace App\Controllers\Api\v1\Auth;
 use  App\Controllers\BaseController;
+use App\Libraries\JWTHelper;
 use App\Models\Users;
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
@@ -32,15 +33,23 @@ class SignUp extends BaseController
             "message"=>"User Already exist please login"
         ]);
 
-        $this->users->insert([
+        $user = $this->users->insert([
             "name" => $name,
             "username" => $username,
             "password" => md5($password)
         ]);
+        $jwt = JWTHelper::encode([
+            "id"=>$user,
+            "name" => $name,
+            "username" => $username,
+        ], 10000);
 
         $data = [
             "status"=>200,
-            "message"=>"Successful"
+            "message"=>"Successful",
+            "data"=>[
+                "token"=>$jwt
+            ]
         ];
         return $this->response->setJSON($data);
     }
