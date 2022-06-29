@@ -43,7 +43,7 @@ $routes->group("/api", ["filter"=>"ApiAuth", 'namespace' => 'App\Controllers\Api
 });
 
 
-var_dump(APPPATH);
+
 
 /*
  * --------------------------------------------------------------------
