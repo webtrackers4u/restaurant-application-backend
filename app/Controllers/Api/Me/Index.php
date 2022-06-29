@@ -15,7 +15,7 @@ class Index extends ApiBaseController
             ->where("customer_id",$payload["customer_id"])
             ->first();
         return $this->response->setJSON([
-            "status"=>200,
+            "result_code"=>200,
             "message"=>"Successful",
             "data"=>$me
         ]);
