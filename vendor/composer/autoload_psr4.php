@@ -6,7 +6,7 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'phpDocumentor\\Reflection\\' => array($vendorDir . '/phpdocumentor/reflection-common/src', $vendorDir . '/phpdocumentor/type-resolver/src', $vendorDir . '/phpdocumentor/reflection-docblock/src'),
+    'phpDocumentor\\Reflection\\' => array($vendorDir . '/phpdocumentor/reflection-common/src', $vendorDir . '/phpdocumentor/reflection-docblock/src', $vendorDir . '/phpdocumentor/type-resolver/src'),
     'Webmozart\\Assert\\' => array($vendorDir . '/webmozart/assert/src'),
     'Utils\\' => array($baseDir . '/utils'),
     'Symfony\\Polyfill\\Php81\\' => array($vendorDir . '/symfony/polyfill-php81'),
@@ -37,6 +37,7 @@ return array(
     'PhpCsFixer\\' => array($vendorDir . '/friendsofphp/php-cs-fixer/src'),
     'Nexus\\PHPUnit\\Extension\\' => array($vendorDir . '/nexusphp/tachycardia/src'),
     'Nexus\\CsConfig\\' => array($vendorDir . '/nexusphp/cs-config/src'),
+    'Moment\\' => array($vendorDir . '/fightbulc/moment/src'),
     'Laminas\\Escaper\\' => array($vendorDir . '/laminas/laminas-escaper/src'),
     'Kint\\' => array($vendorDir . '/kint-php/kint/src'),
     'Firebase\\JWT\\' => array($vendorDir . '/firebase/php-jwt/src'),

@@ -9,8 +9,8 @@ class ComposerStaticInitb8df4ff4590d700bcf04f8380a4ea208
     public static $files = array (
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
         '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
-        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '0d59ee240a4cd96ddbb4ff164fccea4d' => __DIR__ . '/..' . '/symfony/polyfill-php73/bootstrap.php',
         '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
         'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
@@ -74,6 +74,10 @@ class ComposerStaticInitb8df4ff4590d700bcf04f8380a4ea208
             'Nexus\\PHPUnit\\Extension\\' => 24,
             'Nexus\\CsConfig\\' => 15,
         ),
+        'M' => 
+        array (
+            'Moment\\' => 7,
+        ),
         'L' => 
         array (
             'Laminas\\Escaper\\' => 16,
@@ -108,8 +112,8 @@ class ComposerStaticInitb8df4ff4590d700bcf04f8380a4ea208
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
         'Webmozart\\Assert\\' => 
         array (
@@ -230,6 +234,10 @@ class ComposerStaticInitb8df4ff4590d700bcf04f8380a4ea208
         'Nexus\\CsConfig\\' => 
         array (
             0 => __DIR__ . '/..' . '/nexusphp/cs-config/src',
+        ),
+        'Moment\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fightbulc/moment/src',
         ),
         'Laminas\\Escaper\\' => 
         array (
@@ -1285,6 +1293,14 @@ class ComposerStaticInitb8df4ff4590d700bcf04f8380a4ea208
         'Laminas\\Escaper\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/laminas/laminas-escaper/src/Exception/ExceptionInterface.php',
         'Laminas\\Escaper\\Exception\\InvalidArgumentException' => __DIR__ . '/..' . '/laminas/laminas-escaper/src/Exception/InvalidArgumentException.php',
         'Laminas\\Escaper\\Exception\\RuntimeException' => __DIR__ . '/..' . '/laminas/laminas-escaper/src/Exception/RuntimeException.php',
+        'Moment\\CustomFormats\\MomentJs' => __DIR__ . '/..' . '/fightbulc/moment/src/CustomFormats/MomentJs.php',
+        'Moment\\FormatsInterface' => __DIR__ . '/..' . '/fightbulc/moment/src/FormatsInterface.php',
+        'Moment\\Moment' => __DIR__ . '/..' . '/fightbulc/moment/src/Moment.php',
+        'Moment\\MomentException' => __DIR__ . '/..' . '/fightbulc/moment/src/MomentException.php',
+        'Moment\\MomentFromVo' => __DIR__ . '/..' . '/fightbulc/moment/src/MomentFromVo.php',
+        'Moment\\MomentHelper' => __DIR__ . '/..' . '/fightbulc/moment/src/MomentHelper.php',
+        'Moment\\MomentLocale' => __DIR__ . '/..' . '/fightbulc/moment/src/MomentLocale.php',
+        'Moment\\MomentPeriodVo' => __DIR__ . '/..' . '/fightbulc/moment/src/MomentPeriodVo.php',
         'Nexus\\CsConfig\\Factory' => __DIR__ . '/..' . '/nexusphp/cs-config/src/Factory.php',
         'Nexus\\CsConfig\\FixerGenerator' => __DIR__ . '/..' . '/nexusphp/cs-config/src/FixerGenerator.php',
         'Nexus\\CsConfig\\Fixer\\AbstractCustomFixer' => __DIR__ . '/..' . '/nexusphp/cs-config/src/Fixer/AbstractCustomFixer.php',
@@ -1626,6 +1642,7 @@ class ComposerStaticInitb8df4ff4590d700bcf04f8380a4ea208
         'PHPUnit\\Util\\PHP\\DefaultPhpProcess' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/PHP/DefaultPhpProcess.php',
         'PHPUnit\\Util\\PHP\\WindowsPhpProcess' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/PHP/WindowsPhpProcess.php',
         'PHPUnit\\Util\\Printer' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/Printer.php',
+        'PHPUnit\\Util\\Reflection' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/Reflection.php',
         'PHPUnit\\Util\\RegularExpression' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/RegularExpression.php',
         'PHPUnit\\Util\\Test' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/Test.php',
         'PHPUnit\\Util\\TestDox\\CliTestDoxPrinter' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/TestDox/CliTestDoxPrinter.php',
