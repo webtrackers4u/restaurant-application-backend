@@ -45,7 +45,7 @@ class VerifyOtp extends ApiBaseController
         $jwt = JWTHelper::encode($checkCustomer, 10000);
 
         $data = [
-            "status"=>200,
+            "result_code"=>200,
             "message"=>"Successfully logged in",
             "data"=>[
                 "token"=>$jwt,
