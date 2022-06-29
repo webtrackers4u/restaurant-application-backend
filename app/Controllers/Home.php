@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Controllers;
-use App\Models\OTPRecordsModel;
+use App\Models\OtpRecordModel;
 use App\Models\RBContactModel;
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
@@ -22,7 +22,7 @@ class Home extends BaseController
     {
 
         $this->rbContactModel = new RBContactModel();
-        $this->OTPRecordsModel = new OTPRecordsModel();
+        $this->OTPRecordsModel = new OtpRecordModel();
 
         $phone = $this->request->getPost("phone");
 

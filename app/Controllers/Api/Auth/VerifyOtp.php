@@ -3,7 +3,7 @@
 namespace App\Controllers\Api\v1\Auth;
 use  App\Controllers\BaseController;
 use App\Libraries\JWTHelper;
-use App\Models\OTPRecordsModel;
+use App\Models\OtpRecordModel;
 use App\Models\RBContactModel;
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
@@ -24,7 +24,7 @@ class VerifyOtp extends BaseController
     {
 
         $this->rbContactModel = new RBContactModel();
-        $this->OTPRecordsModel = new OTPRecordsModel();
+        $this->OTPRecordsModel = new OtpRecordModel();
 
         $phone = $this->request->getPost("phone");
         $otp = $this->request->getPost("otp");
