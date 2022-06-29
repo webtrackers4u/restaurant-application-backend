@@ -38,7 +38,7 @@ class SendOtp extends ApiBaseController
         $this->otpRecordsModel->insert([
             "code" => $code,
             "expires_at" => $expires_at,
-            "type" => 0,
+            "type" => OtpRecordModel::TYPES["SIGN_IN"],
             "customer_id" => $customerId
         ]);
 

@@ -3,6 +3,9 @@ namespace App\Models;
 use CodeIgniter\Model;
 
 class OtpRecordModel extends Model {
+    const TYPES = [
+        "SIGN_IN" => 0
+    ];
     protected $table      = 'otp_record';
     protected $primaryKey = 'otp_record_id';
 
