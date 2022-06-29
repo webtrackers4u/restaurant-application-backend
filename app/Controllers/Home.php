@@ -8,7 +8,7 @@ use CodeIgniter\HTTP\ResponseInterface;
 use Moment\Moment;
 use Psr\Log\LoggerInterface;
 
-class Index extends BaseController
+class Home extends BaseController
 {
     private $rbContactModel;
     private $OTPRecordsModel;

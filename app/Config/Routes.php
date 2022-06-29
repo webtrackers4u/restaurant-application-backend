@@ -17,7 +17,7 @@ if (file_exists(SYSTEMPATH . 'Config/Routes.php')) {
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Index');
+$routes->setDefaultController('Home');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
@@ -31,8 +31,8 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-//$routes->get('/', 'Index::index');
-
+//$routes->get('/', 'Home::index');
+/*
 $routes->group('/api/v1',['namespace' => 'App\Controllers\Api\v1'],  function ($routes) {
     $routes->post('auth/sendOtp', 'Auth\SendOTP::index');
     $routes->post('auth/verifyOtp', 'Auth\VerifyOTP::index');
@@ -42,6 +42,7 @@ $routes->group('/api/v1',['namespace' => 'App\Controllers\Api\v1'],  function ($
 $routes->group("/api/v1", ["filter"=>"ApiAuth", 'namespace' => 'App\Controllers\Api\v1'], function ($routes){
     $routes->get('me', 'Me\Index::index');
 });
+*/
 
 
 
