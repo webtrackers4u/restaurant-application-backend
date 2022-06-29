@@ -34,7 +34,7 @@ $routes->setAutoRoute(false);
 $routes->get('/', 'Home::index');
 
 $routes->group('/api',['namespace' => 'App\Controllers\Api'],  function ($routes) {
-    $routes->all('auth/sendOtp', 'Auth\SendOtp::index');
+    $routes->post('auth/sendOtp', 'Auth\SendOtp::index');
     $routes->post('auth/verifyOtp', 'Auth\VerifyOtp::index');
 });
 
