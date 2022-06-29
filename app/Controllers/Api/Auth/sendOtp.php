@@ -9,7 +9,7 @@ use CodeIgniter\HTTP\ResponseInterface;
 use Moment\Moment;
 use Psr\Log\LoggerInterface;
 
-class sendOtp extends BaseController
+class SendOtp extends BaseController
 {
     private $rbContactModel;
     private $OTPRecordsModel;
