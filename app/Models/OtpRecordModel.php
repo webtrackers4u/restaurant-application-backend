@@ -9,7 +9,7 @@ class OtpRecordModel extends Model {
     protected $useSoftDeletes = false;
 
     protected $allowedFields = [
-        "otp",
+        "code",
         "expires_at",
         "type",
         "customer_id"
