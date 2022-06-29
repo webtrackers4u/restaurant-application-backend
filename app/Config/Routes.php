@@ -21,7 +21,7 @@ $routes->setDefaultController('Home');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
-$routes->setAutoRoute(true);
+$routes->setAutoRoute(false);
 
 /*
  * --------------------------------------------------------------------
@@ -31,18 +31,17 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-//$routes->get('/', 'Home::index');
-/*
-$routes->group('/api/v1',['namespace' => 'App\Controllers\Api\v1'],  function ($routes) {
-    $routes->post('auth/sendOtp', 'Auth\SendOTP::index');
+$routes->get('/', 'Home::index');
+
+$routes->group('/api/v1',['namespace' => 'App\Controllers\Api\V1'],  function ($routes) {
+    $routes->post('auth/sendOtp', 'Auth\SendOtp::index');
     $routes->post('auth/verifyOtp', 'Auth\VerifyOtp::index');
-    $routes->post('auth/signup', 'Auth\SignUp::index');
 });
 
-$routes->group("/api/v1", ["filter"=>"ApiAuth", 'namespace' => 'App\Controllers\Api\v1'], function ($routes){
+$routes->group("/api/v1", ["filter"=>"ApiAuth", 'namespace' => 'App\Controllers\Api\V1'], function ($routes){
     $routes->get('me', 'Me\Index::index');
 });
-*/
+
 
 
 
