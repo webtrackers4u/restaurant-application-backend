@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controllers\Api\v1\Auth;
+namespace App\Controllers\Api\V1\Auth;
 use  App\Controllers\BaseController;
 use App\Libraries\JWTHelper;
 use App\Models\OTPRecordsModel;
