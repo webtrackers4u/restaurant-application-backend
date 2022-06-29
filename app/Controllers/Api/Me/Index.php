@@ -1,18 +1,18 @@
 <?php
 
-namespace App\Controllers\Api\v1\Me;
+namespace App\Controllers\Api\Me;
 
-use App\Controllers\BaseController;
-use App\Models\RBContactModel;
+use App\Controllers\Api\ApiBaseController;
+use App\Models\CustomerModel;
 
-class Index extends BaseController
+class Index extends ApiBaseController
 {
     public function index()
     {
         $payload = $this->request->payload;
-        $users= new RBContactModel();
+        $users= new CustomerModel();
         $me = $users
-            ->where("rbcontactId",$payload["rbcontactId"])
+            ->where("customer_id",$payload["customer_id"])
             ->first();
         return $this->response->setJSON([
             "status"=>200,
