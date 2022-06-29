@@ -33,12 +33,12 @@ $routes->setAutoRoute(false);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
-$routes->group('/api/v1',['namespace' => 'App\Controllers\Api\V1'],  function ($routes) {
+$routes->group('/api',['namespace' => 'App\Controllers\Api'],  function ($routes) {
     $routes->post('auth/sendOtp', 'Auth\SendOtp::index');
     $routes->post('auth/verifyOtp', 'Auth\VerifyOtp::index');
 });
 
-$routes->group("/api/v1", ["filter"=>"ApiAuth", 'namespace' => 'App\Controllers\Api\V1'], function ($routes){
+$routes->group("/api", ["filter"=>"ApiAuth", 'namespace' => 'App\Controllers\Api'], function ($routes){
     $routes->get('me', 'Me\Index::index');
 });
 
