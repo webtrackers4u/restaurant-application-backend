@@ -35,7 +35,7 @@ $routes->setAutoRoute(true);
 /*
 $routes->group('/api/v1',['namespace' => 'App\Controllers\Api\v1'],  function ($routes) {
     $routes->post('auth/sendOtp', 'Auth\SendOTP::index');
-    $routes->post('auth/verifyOtp', 'Auth\VerifyOTP::index');
+    $routes->post('auth/verifyOtp', 'Auth\VerifyOtp::index');
     $routes->post('auth/signup', 'Auth\SignUp::index');
 });
 
