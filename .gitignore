@@ -13,3 +13,8 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+/writable/debugbar/*
+/writable/cache/*
+/writable/logs/*
+/writable/session/*
+/writable/uploads/*
