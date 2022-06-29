@@ -12,7 +12,7 @@ use Moment\MomentException;
 use Psr\Log\LoggerInterface;
 use function Sodium\add;
 
-class sendOTP extends BaseController
+class sendOtp extends BaseController
 {
     private $rbContactModel;
     private $OTPRecordsModel;

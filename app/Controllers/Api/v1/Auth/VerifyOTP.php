@@ -10,7 +10,7 @@ use CodeIgniter\HTTP\ResponseInterface;
 use Moment\Moment;
 use Psr\Log\LoggerInterface;
 
-class VerifyOTP extends BaseController
+class VerifyOtp extends BaseController
 {
     private $rbContactModel;
     private $OTPRecordsModel;
