@@ -43,7 +43,10 @@ $routes->group("/api", ["filter"=>"ApiAuth", 'namespace' => 'App\Controllers\Api
     //menu related routes
     $routes->get('restaurant/menu', 'Restaurant\Menu::index');
 
-    $routes->get('restaurant/product', 'Restaurant\Product::index');
+    //product related data
+    $routes->get('restaurant/products', 'Restaurant\Products::products');
+    $routes->get('restaurant/popular-products', 'Restaurant\Products::popularProducts');
+    $routes->get('restaurant/products/(:num)', 'Restaurant\Products::productDetails/$1');
 });
 
 
