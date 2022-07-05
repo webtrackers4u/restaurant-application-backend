@@ -13,7 +13,8 @@ class ProductModel extends Model {
 
     public function getMenuProducts($menu_id): array
     {
-        $sql = "SELECT p.name,
+        $sql = "SELECT p.product_id,
+           p.name,
            p.is_veg,
            p.unit,
            p.selling_price as price,
@@ -26,7 +27,8 @@ class ProductModel extends Model {
 
     public function getPopularProducts($department): array
     {
-        $sql = "SELECT p.name,
+        $sql = "SELECT p.product_id,
+           p.name,
            p.is_veg,
            p.unit,
            p.selling_price as price,
