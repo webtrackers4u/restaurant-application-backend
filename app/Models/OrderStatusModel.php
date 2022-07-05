@@ -8,6 +8,6 @@ class OrderStatusModel extends Model {
 
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ["res_order_id","order_status","admin_id","dated","note"];
+    protected $allowedFields = ["customer_order_id","order_status","admin_id","dated","note"];
     protected $useTimestamps = false;
 }

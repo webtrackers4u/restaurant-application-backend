@@ -8,6 +8,6 @@ class AccountHeadModel extends Model {
 
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ["parent_id","name"];
+    protected $allowedFields = ["parent_id","name","addedBy","addedDate"];
     protected $useTimestamps = false;
 }

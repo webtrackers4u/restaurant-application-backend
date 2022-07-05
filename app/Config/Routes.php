@@ -40,6 +40,10 @@ $routes->group('/api',['namespace' => 'App\Controllers\Api'],  function ($routes
 
 $routes->group("/api", ["filter"=>"ApiAuth", 'namespace' => 'App\Controllers\Api'], function ($routes){
     $routes->get('me', 'Me\Index::index');
+    //menu related routes
+    $routes->get('restaurant/menu', 'Restaurant\Menu::index');
+
+    $routes->get('restaurant/product', 'Restaurant\Product::index');
 });
 
 

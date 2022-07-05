@@ -8,6 +8,6 @@ class PurchaseDetailModel extends Model {
 
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ["product_id","rate","unit","quentity","total_amount","is_return","return_qty","return_amount","note"];
+    protected $allowedFields = ["product_id","rate","unit","quantity","total_amount","is_return","return_quantity","return_amount","note","base_unit","base_total_quantity","base_unit_quantity"];
     protected $useTimestamps = false;
 }
