@@ -3,7 +3,6 @@
 namespace App\Controllers\Api\Restaurant;
 
 use App\Controllers\Api\ApiBaseController;
-use App\Models\MenuModel;
 use App\Models\ProductModel;
 
 class Products extends ApiBaseController

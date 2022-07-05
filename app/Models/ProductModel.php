@@ -13,14 +13,14 @@ class ProductModel extends Model {
 
     public function getMenuProducts($menu_id): array
     {
-        $sql = "SELECT p.* FROM product p  INNER JOIN menu_product mp on mp.menu_id=".$this->db->escape($menu_id);
+        $sql = "SELECT p.name, p.is_veg, p.unit, p.selling_price, p.image_1, p.image_2 FROM product p  INNER JOIN menu_product mp on mp.menu_id=".$this->db->escape($menu_id);
         $query = $this->db->query($sql);
         return $query->getResultArray();
     }
 
     public function getPopularProducts($department): array
     {
-        $sql = "SELECT p.* FROM product p
+        $sql = "SELECT p.name, p.is_veg, p.unit, p.selling_price, p.image_1, p.image_2 FROM product p
             INNER JOIN menu_product mp on mp.product_id=p.product_id
             INNER JOIN menu m on m.menu_id=mp.menu_id AND m.department=".$this->db->escape($department);
         $query = $this->db->query($sql);
