@@ -14,6 +14,11 @@ class Products extends ApiBaseController
         //search params
         $menu_id_s = $this->request->getGet("menu_id");
         $products = $productModel->getMenuProducts($menu_id_s);
+        $products = array_map(function ($product){
+            $product["thumbnail"] = web_base_url($product["image_1"]);
+            $product["banner"] = web_base_url($product["image_2"]);
+            return $product;
+        }, $products);
         return $this->response->setJSON([
             "result_code"=>200,
             "message"=>"Successful",
@@ -26,6 +31,11 @@ class Products extends ApiBaseController
         $productModel = new ProductModel();
         //search params
         $products = $productModel->getPopularProducts("restaurant");
+        $products = array_map(function ($product){
+            $product["thumbnail"] = web_base_url($product["image_1"]);
+            $product["banner"] = web_base_url($product["image_2"]);
+            return $product;
+        }, $products);
         return $this->response->setJSON([
             "result_code"=>200,
             "message"=>"Successful",
