@@ -17,6 +17,8 @@ class Products extends ApiBaseController
         $products = array_map(function ($product){
             $product["thumbnail"] = $product["image_1"];
             $product["banner"] = $product["image_2"];
+            unset($product["image_1"]);
+            unset($product["image_2"]);
             return $product;
         }, $products);
         return $this->response->setJSON([
@@ -34,6 +36,8 @@ class Products extends ApiBaseController
         $products = array_map(function ($product){
             $product["thumbnail"] = $product["image_1"];
             $product["banner"] = $product["image_2"];
+            unset($product["image_1"]);
+            unset($product["image_2"]);
             return $product;
         }, $products);
         return $this->response->setJSON([
