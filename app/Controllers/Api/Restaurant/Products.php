@@ -46,13 +46,14 @@ class Products extends ApiBaseController
     public function productDetails($product_id){
         $productModel = new ProductModel();
         //search params
-        $products = $productModel->getProductDetails($product_id);
+        $product = $productModel->getProductDetails($product_id);
+        $product["thumbnail"] = web_base_url($product["thumbnail"]);
+        $product["banner"] = web_base_url($product["banner"]);
+
         return $this->response->setJSON([
             "result_code"=>200,
             "message"=>"Successful",
-            "data"=>[
-
-            ]
+            "data"=>$product
         ]);
     }
 }
