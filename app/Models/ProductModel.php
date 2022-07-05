@@ -44,7 +44,7 @@ class ProductModel extends Model {
     public function getProductDetails($product_id){
         $sql = "SELECT p.* FROM product p WHERE p.product_id=".$this->db->escape($product_id);
         $query = $this->db->query($sql);
-        return $query->getRowObject();
+        return $query->getRowArray();
     }
 
 
