@@ -8,7 +8,7 @@ class ProductModel extends Model {
 
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ["name","search_key","cgst_prcnt","sgst_prcnt","description","unit","market_price","selling_price","discount_note","note","image_1","image_2","view_order","product_for","active_status","code","base_unit","base_unit_quantity","uique_product_id","addedBy","addedDate","modifyBy","modifyDate"];
+    protected $allowedFields = ["name","search_key","cgst_prcnt","sgst_prcnt","description","unit","market_price","selling_price","discount_note","note","thumbnail","banner","view_order","product_for","active_status","code","base_unit","base_unit_quantity","uique_product_id","addedBy","addedDate","modifyBy","modifyDate"];
     protected $useTimestamps = false;
 
     public function getMenuProducts($menu_id): array
@@ -18,8 +18,8 @@ class ProductModel extends Model {
            p.is_veg,
            p.unit,
            p.selling_price as price,
-           p.image_1 as thumbnail,
-           p.image_2 as banner
+           p.thumbnail,
+           p.banner
         FROM product p  INNER JOIN menu_product mp on mp.menu_id=".$this->db->escape($menu_id);
         $query = $this->db->query($sql);
         return $query->getResultArray();
@@ -32,8 +32,8 @@ class ProductModel extends Model {
            p.is_veg,
            p.unit,
            p.selling_price as price,
-           p.image_1 as thumbnail,
-           p.image_2 as banner
+           p.thumbnail,
+           p.banner
         FROM product p
             INNER JOIN menu_product mp on mp.product_id=p.product_id
             INNER JOIN menu m on m.menu_id=mp.menu_id AND m.department=".$this->db->escape($department);
@@ -42,8 +42,8 @@ class ProductModel extends Model {
     }
 
     public function getProductDetails($product_id){
-        $sql = "SELECT p.*,    p.image_1 as thumbnail,
-           p.image_2 as banner FROM product p WHERE p.product_id=".$this->db->escape($product_id);
+        $sql = "SELECT p.*,    p.thumbnail,
+           p.banner FROM product p WHERE p.product_id=".$this->db->escape($product_id);
         $query = $this->db->query($sql);
         return $query->getRowArray();
     }
