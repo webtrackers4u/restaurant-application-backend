@@ -15,8 +15,8 @@ class Products extends ApiBaseController
         $menu_id_s = $this->request->getGet("menu_id");
         $products = $productModel->getMenuProducts($menu_id_s);
         $products = array_map(function ($product){
-            $product["thumbnail"] = web_base_url($product["thumbnail"]);
-            $product["banner"] = web_base_url($product["banner"]);
+            $product["thumbnail"] = $product["thumbnail"]?web_base_url($product["thumbnail"]):null;
+            $product["banner"] = $product["banner"]?web_base_url($product["banner"]):null;
             return $product;
         }, $products);
         return $this->response->setJSON([
@@ -32,8 +32,8 @@ class Products extends ApiBaseController
         //search params
         $products = $productModel->getPopularProducts("restaurant");
         $products = array_map(function ($product){
-            $product["thumbnail"] = web_base_url($product["thumbnail"]);
-            $product["banner"] = web_base_url($product["banner"]);
+            $product["thumbnail"] = $product["thumbnail"]?web_base_url($product["thumbnail"]):null;
+            $product["banner"] = $product["banner"]?web_base_url($product["banner"]):null;
             return $product;
         }, $products);
         return $this->response->setJSON([
@@ -47,8 +47,8 @@ class Products extends ApiBaseController
         $productModel = new ProductModel();
         //search params
         $product = $productModel->getProductDetails($product_id);
-        $product["thumbnail"] = web_base_url($product["thumbnail"]);
-        $product["banner"] = web_base_url($product["banner"]);
+        $product["thumbnail"] = $product["thumbnail"]?web_base_url($product["thumbnail"]):null;
+        $product["banner"] = $product["banner"]?web_base_url($product["banner"]):null;
 
         return $this->response->setJSON([
             "result_code"=>200,
