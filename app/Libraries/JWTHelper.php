@@ -8,7 +8,7 @@ class JWTHelper {
     static function encode($data, $lifespan){
         //encrypt user data
         return JWT::encode([
-            'iss' => 'http://ci.lo',
+            'iss' => base_url(),
             'aud' => $data,
             'iat' => time(),
             'nbf' => time(),
