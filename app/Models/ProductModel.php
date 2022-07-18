@@ -20,7 +20,7 @@ class ProductModel extends Model {
            p.selling_price as price,
            p.thumbnail,
            p.banner
-        FROM product p  INNER JOIN menu_product mp on mp.menu_id=".$this->db->escape($menu_id);
+        FROM product p  INNER JOIN menu_product mp on p.product_id=mp.product_id AND mp.menu_id=".$this->db->escape($menu_id);
         $query = $this->db->query($sql);
         return $query->getResultArray();
     }
