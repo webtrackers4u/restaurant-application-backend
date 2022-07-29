@@ -8,6 +8,6 @@ class CustomerAddressModel extends Model {
 
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ["customer_id","address_title","pin","address","po","ps","lattitude","lognitude","land_mark","is_default","mobile_no"];
+    protected $allowedFields = ["customer_id","pin","address","po","ps","lattitude","lognitude","land_mark","is_default","mobile_no"];
     protected $useTimestamps = false;
 }
