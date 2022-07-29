@@ -40,9 +40,12 @@ $routes->group('/api',['namespace' => 'App\Controllers\Api'],  function ($routes
 
 $routes->group("/api", ["filter"=>"ApiAuth", 'namespace' => 'App\Controllers\Api'], function ($routes){
     $routes->get('me', 'Me\Index::index');
+    //address related routes
     $routes->get('me/address', 'Me\Address::index');
-    $routes->post('me/address', 'Me\Address::index');
-    $routes->put('me/address', 'Me\Address::index');
+    $routes->post('me/address', 'Me\Address::addAddress');
+    $routes->get('me/address/(:num)', 'Me\Address::getAddress/$1');
+    $routes->put('me/address/(:num)', 'Me\Address::updateAddress/$1');
+    
     //menu related routes
     $routes->get('restaurant/menu', 'Restaurant\Menu::index');
 
