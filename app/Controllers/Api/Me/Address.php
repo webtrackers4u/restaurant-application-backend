@@ -56,7 +56,7 @@ class Address extends ApiBaseController
 
         $address_res = $customer_address->insert($data);
         if(!$address_res){
-            return $this->response->setStatus(400)->setJSON([
+            return $this->response->setStatusCode(400)->setJSON([
                 "result_code"=>400,
                 "message"=>"Something went wrong",
             ]);
@@ -90,7 +90,7 @@ class Address extends ApiBaseController
         ->where("customer_id",$payload["customer_id"])
         ->update($customer_address_id, $data);
         if(!$address_res){
-            return $this->response->setStatus(400)->setJSON([
+            return $this->response->setStatusCode(400)->setJSON([
                 "result_code"=>400,
                 "message"=>"Something went wrong",
             ]);
