@@ -11,6 +11,7 @@ class ApiAuth implements FilterInterface
 {
     public function before(RequestInterface $request, $arguments = null)
     {
+        $request = service('request');
         // Do something here
         $token = $request->getHeaderLine("Authorization");
         $response = service('response');
@@ -18,9 +19,8 @@ class ApiAuth implements FilterInterface
             $payload = (array)JWTHelper::decode($token);
             $request->payload = $payload;
         } catch (\Exception $exception){
-            $response->setBody('Access denied');
             $response->setStatusCode(401)->setJSON([
-                "status" => 401,
+                "restult_code" => 401,
                 "message"=> "Invalid Token Supplied"
             ]);
             return $response;
